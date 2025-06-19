@@ -28,9 +28,9 @@ This project showcases a small-scale AI application that uses an open-source Oll
 
 3.  **Install and run the LLM:**
     * Download Ollama: [https://ollama.com/download](https://ollama.com/download)
-    * Start the Mistral model:
+    * Start the qwen3:1.7b model:
         ```bash
-        ollama run mistral
+        ollama run qwen3:1.7b
         ```
 
 4.  **Launch the UI:**
