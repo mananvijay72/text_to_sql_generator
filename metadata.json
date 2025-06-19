@@ -1,0 +1,74 @@
+{
+  "customers": {
+    "description": "Customer master data.",
+    "columns": {
+      "customer_id": "Unique ID of the customer",
+      "name": "Full name of the customer",
+      "dob": "Date of birth",
+      "income": "Annual income in USD",
+      "segment": "Customer segment such as Gold, Silver, Platinum"
+    }
+  },
+  "accounts": {
+    "description": "Bank accounts owned by customers.",
+    "columns": {
+      "account_id": "Unique account ID",
+      "customer_id": "ID of account owner (linked to customers)",
+      "account_type": "Type of account (Checking or Savings)",
+      "open_date": "Date the account was opened",
+      "balance": "Current account balance"
+    }
+  },
+  "transactions": {
+    "description": "Financial transactions performed on accounts.",
+    "columns": {
+      "txn_id": "Unique transaction ID",
+      "account_id": "Account ID where transaction occurred",
+      "txn_date": "Date of the transaction",
+      "amount": "Amount of transaction",
+      "txn_type": "Transaction type (debit or credit)"
+    }
+  },
+  "loan_applications": {
+    "description": "Applications submitted by customers for loans.",
+    "columns": {
+      "loan_id": "Unique loan application ID",
+      "customer_id": "ID of applicant (linked to customers)",
+      "branch": "Bank branch where application was submitted",
+      "application_date": "Submission date of loan application",
+      "amount": "Requested loan amount",
+      "status": "Approval status (approved or rejected)"
+    }
+  },
+  "credit_cards": {
+    "description": "Credit cards issued to customers.",
+    "columns": {
+      "credit_card_id": "Unique ID for the credit card",
+      "customer_id": "Card holder ID (linked to customers)",
+      "card_type": "Type of credit card (Visa, Mastercard, Amex)",
+      "credit_limit": "Maximum credit limit on the card",
+      "issued_date": "Date card was issued",
+      "status": "Card status (active or blocked)"
+    }
+  },
+  "payments": {
+    "description": "Payments made toward credit card balances.",
+    "columns": {
+      "payment_id": "Unique payment ID",
+      "credit_card_id": "ID of the credit card",
+      "payment_date": "Date of the payment",
+      "amount": "Payment amount",
+      "method": "Payment method (NEFT, UPI, cash)"
+    }
+  },
+  "fraud_alerts": {
+    "description": "Fraud detection alerts for suspicious account activity.",
+    "columns": {
+      "alert_id": "Unique alert ID",
+      "account_id": "Linked account that triggered the alert",
+      "alert_date": "Date the alert was raised",
+      "alert_type": "Type of alert (suspicious_login, high_txn_volume, etc.)",
+      "severity": "Alert severity (low, medium, high)"
+    }
+  }
+}
